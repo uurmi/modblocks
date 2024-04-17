@@ -1,0 +1,80 @@
+<div class="flex flex-col   w-full h-full">
+    <div class="w-full max-w-3xl">
+        <div class="max-w-none mx-auto prose prose-sm">
+            <button mat-stroked-button color="primary" (click)="prettyFormula()">Pretty Formula</button>
+            <button mat-stroked-button color="primary" (click)="cellFormula()">Get Formula</button>
+            <fuse-card class="flex flex-col mx-auto px-8 py-6 pb-4" #fuseCard>
+                <div
+                    class="
+                        flex
+                        items-center
+                        justify-between
+                        ng-tns-c156-54 ng-star-inserted
+                    "
+                >
+                <!-- <button class="btn" data-clipboard-target="#prettyFormula">
+                  copy
+                </button> -->
+
+            <div id="prettyFormula">
+</div>
+</div></fuse-card>
+
+
+     
+            <img
+                class="w-20"
+                src="assets/images/logo/logo.svg"
+                alt="Logo image">
+            <h1>Hello World !</h1>
+
+            <fuse-card class="flex flex-col mx-auto px-8 py-6 pb-4" #fuseCard>
+                <div
+                    class="
+                        flex
+                        items-center
+                        justify-between
+                        ng-tns-c156-54 ng-star-inserted
+                    "
+                >
+
+            <div class="my-2">
+                Current Range: {{(testObservable$ | async)?.address}}
+                <p></p>
+
+                <button mat-stroked-button color="primary" (click)="loadDataStore()">Check Val</button>
+                <button mat-stroked-button color="primary" (click)="getCellFormula()">Check Formula</button>
+                <p></p>
+
+                {{formatted}}
+
+                <p></p>
+                <table>
+                    <tr *ngFor="let row of (testObservable$ | async)?.values; let i = index">
+                        <td *ngFor="let value of row; let j = index">
+                            {{ value }}
+                        </td>
+                    </tr>
+                </table>
+
+
+                <!-- <button (click)="loadDataStore()">
+                    log Datastore;
+                </button> -->
+                <!-- ID: {{ chart.id }}
+                <p></p>
+                <table>
+                    <tr *ngFor="let row of chart.values; let i = index">
+                        <td *ngFor="let value of row; let j = index">
+                            {{ value }}
+                        </td>
+                    </tr>
+                </table> -->
+            </div>
+            </div>
+            </fuse-card>
+
+          
+        </div>
+    </div>
+</div>

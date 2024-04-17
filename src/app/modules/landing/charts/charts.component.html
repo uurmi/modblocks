@@ -1,0 +1,63 @@
+<div class="flex flex-col items-center w-full h-full" style="margin-top:15px; margin-left: 8px; margin-right: 15px">
+    <div class="w-full max-w-3xl">
+
+        <div class="flex justify-center rounded-lg text-lg" role="group">
+
+            <button
+                (click)="createBinding()"
+                class="bg-white text-blue-500 hover:bg-blue-500 hover:text-white border border-r-0 border-blue-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline"
+
+            >
+                Bind to selected range
+            </button>
+
+                <button
+        (click)="getFormula()"
+        class="bg-white text-blue-500 hover:bg-blue-500 hover:text-white border border-blue-500  px-4 py-2 mx-0 outline-none focus:shadow-outline"
+
+    >
+        Get Formula
+      </button>
+
+        <button
+          (click)="addChart()"
+          class="bg-white text-blue-500 hover:bg-blue-500 hover:text-white border border-l-0 border-blue-500 rounded-r-lg px-4 py-2 mx-0 outline-none focus:shadow-outline"
+
+            >
+                Add Chart
+            </button>
+
+
+
+      </div>
+
+        <div class="max-w-none mx-auto prose prose-sm">
+            <h1>My Charts</h1>
+        
+        </div>
+
+
+        <!-- <ul class="padding-left: 0px; padding-top: 4px; padding-bottom: 4px;"> -->
+          <div class = "my-4" *ngFor="let chart of charts">
+            <app-chart-card [chart] = "chart"></app-chart-card> 
+          </div>
+        <!-- </ul> -->
+
+        <!-- rather than passing 'values through, can you pass the chart object through and each chart element in the array contains a values property that is used to populate the chart -->
+        <!-- <person-details  [person]="person"></person-details> -->
+
+
+
+      </div>
+
+
+
+
+
+
+      
+
+
+        
+   
+</div>

@@ -1,0 +1,43 @@
+/* ----------------------------------------------------------------------------------------------------- */
+/*  @ Import/write your custom styles here.
+/*  @ Styles from this file will override 'vendors.scss' and Fuse's base styles.
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/*-----------FORMULA STYLES------------*/
+.formula{
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	background-color:#f5fffa;
+	border:solid 1px #e4e4e4;
+	padding: 1.428em;
+	overflow:auto;
+}
+#fomatFormula_2_out{display:inline;white-space: nowrap}
+.function{
+	color:#069;
+}
+.function_start, .function_stop{
+	color:#ff0000;
+}
+.tabbed{border-left:dotted 1px #a0a0a0}
+.quote_mark, .text{color:#0000ff}
+/*-----------FORMULA STYLES------------*/
+
+label{margin: 0.5em 0;}
+
+input[type="file"], input[type="image"], input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {
+    vertical-align: text-top;
+}
+
+#copyFormulaBtn{
+	float:right;
+  position: relative;
+	clear: none;
+}
+

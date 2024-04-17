@@ -1,0 +1,220 @@
+
+
+<div class="container mx-auto p-4">
+
+
+
+
+<fuse-card
+    class="
+        flex flex-col
+        
+        w-auto
+        p-4
+        filter-info
+        ng-tns-c142-412 ng-star-inserted
+    "
+    ><!---->
+    <div
+        class="
+            text-2xl
+            font-semibold
+            leading-tight
+            ng-tns-c142-412 ng-star-inserted
+        "
+    >
+        Controls
+    </div>
+    <div class="mt-4 ng-tns-c142-412 ng-star-inserted">
+        Slider Value: {{value}}
+        <mat-slider 
+        class="w-full"
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="1"
+        step="1"
+        min="0"
+        max="200"
+        aria-label="units"
+        [(ngModel)]="value">
+
+        </mat-slider>
+    </div>
+
+
+    <div class="mt-4 ng-tns-c142-412 ng-star-inserted">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem excepturi adipisci porro minus commodi officia repudiandae corrupti officiis doloremque illum nemo, cum, velit magni. Provident dolor eveniet repellat! Perferendis, est.
+    </div>
+    <hr class="w-full border-t my-6 ng-tns-c142-412 ng-star-inserted" />
+    <div
+    class="
+        text-2xl
+        font-semibold
+        leading-tight
+        ng-tns-c142-412 ng-star-inserted
+    "
+>    SVG Window:
+</div>
+<div class = " container mx-auto">
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 800 800"
+    fill="currentColor"
+    fit=""
+    height="100%"
+    width="100%"
+    preserveAspectRatio="xMidYMid meet"
+    focusable="false">
+
+        <circle  cx="50" cy="50" [attr.r]="value" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+</div>
+<hr class="w-full border-t my-6 ng-tns-c142-412 ng-star-inserted" />
+
+
+        
+
+
+    <div class="flex flex-col ng-tns-c142-412 ng-star-inserted">
+        <div class="flex items-center">
+            <mat-icon
+                role="img"
+                class="mat-icon notranslate icon-size-5 mr-3 mat-icon-no-color"
+                aria-hidden="true"
+                data-mat-icon-type="svg"
+                data-mat-icon-name="location-marker"
+                data-mat-icon-namespace="heroicons_solid"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    fit=""
+                    height="100%"
+                    width="100%"
+                    preserveAspectRatio="xMidYMid meet"
+                    focusable="false"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd"
+                    ></path></svg></mat-icon
+            ><span class="leading-none">London, UK</span>
+        </div>
+        <div class="flex items-center mt-4">
+            <mat-icon
+                role="img"
+                class="mat-icon notranslate icon-size-5 mr-3 mat-icon-no-color"
+                aria-hidden="true"
+                data-mat-icon-type="svg"
+                data-mat-icon-name="briefcase"
+                data-mat-icon-namespace="heroicons_solid"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    fit=""
+                    height="100%"
+                    width="100%"
+                    preserveAspectRatio="xMidYMid meet"
+                    focusable="false"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                        clip-rule="evenodd"
+                    ></path>
+                    <path
+                        d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
+                    ></path></svg></mat-icon
+            ><span class="leading-none">ACME Corp. Lead UX Designer</span>
+        </div>
+        <div class="flex items-center mt-4">
+            <mat-icon
+                role="img"
+                class="mat-icon notranslate icon-size-5 mr-3 mat-icon-no-color"
+                aria-hidden="true"
+                data-mat-icon-type="svg"
+                data-mat-icon-name="cake"
+                data-mat-icon-namespace="heroicons_solid"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    fit=""
+                    height="100%"
+                    width="100%"
+                    preserveAspectRatio="xMidYMid meet"
+                    focusable="false"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z"
+                        clip-rule="evenodd"
+                    ></path></svg></mat-icon
+            ><span class="leading-none">April, 24</span>
+        </div>
+    </div>
+
+
+      <!--Start BUTTON-->
+    <button
+ 
+        mat-flat-button=""
+        class="
+            mat-focus-indicator
+            px-6
+            mt-8
+            mat-flat-button mat-button-base mat-primary
+            ng-tns-c142-412 ng-star-inserted
+        "
+        tabindex="0"
+    >
+        <span class="mat-button-wrapper" (click)="refreshValue()"> Update Values </span
+        ><span matripple="" class="mat-ripple mat-button-ripple"></span
+        ><span class="mat-button-focus-overlay"></span></button
+    >
+    <!--END BUTTON-->
+
+          <!--Start BUTTON-->
+          <button
+ 
+          mat-flat-button=""
+          class="
+              mat-focus-indicator
+              px-6
+              mt-8
+              mat-flat-button mat-button-base mat-primary
+              ng-tns-c142-412 ng-star-inserted
+          "
+          tabindex="0"
+      >
+          <span class="mat-button-wrapper" (click)="getExtendedRange()"> Get Extended Range </span
+          ><span matripple="" class="mat-ripple mat-button-ripple"></span
+          ><span class="mat-button-focus-overlay"></span></button
+      >
+      <!--END BUTTON-->
+
+            <!--Start BUTTON-->
+    <button
+ 
+    mat-flat-button=""
+    class="
+        mat-focus-indicator
+        px-6
+        mt-8
+        mat-flat-button mat-button-base mat-primary
+        ng-tns-c142-412 ng-star-inserted
+    "
+    tabindex="0"
+>
+    <span class="mat-button-wrapper" (click)="loopRange()"> Loop through Range </span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span></button
+>
+<!--END BUTTON-->
+
+    <!----><!----><!----></fuse-card
+>
+    
+</div>

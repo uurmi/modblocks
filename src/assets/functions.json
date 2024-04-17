@@ -1,0 +1,88 @@
+{
+    "allowErrorForDataTypeAny": true,
+    "functions": [
+        {
+            "id": "ADD",
+            "name": "ADD",
+            "description": "Add two numbers",
+            "helpUrl": "http://www.contoso.com/help",
+            "result": {
+                "type": "number",
+                "dimensionality": "scalar"
+            },
+            "parameters": [
+                {
+                    "name": "first",
+                    "description": "first number to add",
+                    "type": "number",
+                    "dimensionality": "scalar"
+                },
+                {
+                    "name": "second",
+                    "description": "second number to add",
+                    "type": "number",
+                    "dimensionality": "scalar"
+                }
+            ]
+        },
+        {
+            "id": "SECONDHIGHEST",
+            "name": "SECONDHIGHEST",
+            "description": "Add two numbers",
+            "helpUrl": "http://www.contoso.com/help",
+            
+            "parameters": [
+                {
+                    "name": "range",
+                    "description": "range of cells",
+                    "type": "any",
+                    "dimensionality": "matrix"
+                }
+            ]
+        },
+        {
+            "id": "SUMDISPLAYED",
+            "name": "SUMDISPLAYED",
+            "description": "Sums a range of cells using the values as they are displayed in a cell",
+            "helpUrl": "http://www.contoso.com/help",
+            
+            "parameters": [
+                {
+                    "name": "range",
+                    "description": "range of cells",
+                    "type": "any",
+                    "dimensionality": "matrix"
+                }
+            ],
+            "options": 
+                {
+                    "requiresParameterAddresses": true
+                }
+        },
+        {
+            "id": "SUMBYCOLOR",
+            "name": "SUMBYCOLOR",
+            "description": "Sums a range of cells using the values as they are displayed in a cell",
+            "helpUrl": "http://www.contoso.com/help",
+            
+            "parameters": [
+                {
+                    "name": "colorCell",
+                    "description": "sum the target cells based on the color in this cell",
+                    "type": "any",
+                    "dimensionality": "matrix"
+                },
+                {
+                    "name": "targetRange",
+                    "description": "range of cells",
+                    "type": "any",
+                    "dimensionality": "matrix"
+                }
+            ],
+            "options": 
+                {
+                    "requiresParameterAddresses": true
+                }
+        }
+    ]
+}

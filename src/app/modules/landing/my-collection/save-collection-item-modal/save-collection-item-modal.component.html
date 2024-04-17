@@ -1,0 +1,67 @@
+<a
+    (click)="triggerModal(modalData)"
+    [color]="'primary'"
+    class="mt-8"
+    mat-flat-button
+>
+    <span>Save collection item</span>
+</a>
+
+<ng-template #modalData let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="save-collection-item-modal">Saving collection item to database</h4>
+        <button (click)="modal.dismiss('Cross click')" aria-label="Close" class="close" type="button">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div *ngIf="saveCollectionItemForm">
+            <form (ngSubmit)="onSaveCollectionItemClick()" [formGroup]="saveCollectionItemForm">
+                <div class="row">
+                    <div *ngIf="saveCollectionItemForm" class="form-group col-md-12">
+
+                        <label for="collectionItemName"> Name </label>
+                        <input class="form-control" formControlName="name" id="collectionItemName"
+                               placeholder="My Collection Item"
+                               type="text">
+
+                        <br>
+
+                        <label> Type </label>
+                        <div class="form-check">
+                            <input checked class="form-check-input" formControlName="type" id="range"
+                                   name="type" type="radio" value="range">
+                            <label class="form-check-label" for="range">
+                                Range
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" formControlName="type" id="format" name="type"
+                                   type="radio" value="format">
+                            <label class="form-check-label" for="format">
+                                Format
+                            </label>
+                        </div>
+
+                        <label>Attributes</label>
+                        <div class="form-check">
+                            <ng-multiselect-dropdown
+                                (onSelect)="onItemSelect()"
+                                [data]="attributes"
+                                [placeholder]="'Select Attributes'"
+                                [settings]="dropdownSettings"
+                                formControlName="attributes">
+                            </ng-multiselect-dropdown>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button (click)="onSaveCollectionItemClick()" class="btn btn-success" type="button">Save</button>
+        <button (click)="modal.close('Close click')" class="btn btn-danger" type="button">Close</button>
+    </div>
+</ng-template>
